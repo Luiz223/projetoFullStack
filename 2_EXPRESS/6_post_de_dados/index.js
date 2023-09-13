@@ -18,7 +18,7 @@ app.post('/usuarios/enviar', (req, res) => {
     const email = req.body.email
 
     console.log(`
-        Usuari: ${nome}
+        Usuario: ${nome}
         Email: ${email}
     `)
 

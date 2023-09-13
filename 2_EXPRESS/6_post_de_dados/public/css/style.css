@@ -1,8 +1,14 @@
 body{
-    background: maroon;
+    background: rgb(64, 151, 137);
 }
 
 h1{
     background: wheat;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 20rem;
+    text-align: center;
+}
+
+a{
+    font-size: 25px;
 }
