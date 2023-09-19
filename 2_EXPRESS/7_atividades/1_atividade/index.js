@@ -1,45 +1,27 @@
 const express = require('express')
 const app = express()
-
 const path = require('path')
-
 const basePath = path.join(__dirname, 'templates')
-
-//utilizar arquivos estaticos como css
 app.use(express.static('public'))
-
-
-// receber informações do corpo da requisição
 app.use(express.urlencoded({
     extended: true
 }))
-
-// converter em objeto
 app.use(express.json())
-
 app.get('/', (requisicao, resposta) => {
     resposta.sendFile(`${basePath}/index.html`)
 })
-
 app.get('/index/cadastro', (req, res) => {
     res.sendFile(`${basePath}/cadastro.html`)
 })
-
 app.post('/cadastro/enviar', (req, res) =>{
     const nome = req.body.nome
-    const email = req.body.email
-    const senha = req.body.senha
+    const nemail = req.body.email
+    const nsenha = req.body.senha
 
     console.log(`
     Usuario: ${nome}
-    Email: ${email}
-    Senha: ${senha}`)
-
+    Email: ${nemail}
+    Senha: ${nsenha}`)
     res.redirect('/')
 })
-
-
-
-
-
 app.listen(3000)
